@@ -2,13 +2,15 @@ import gokv from "https://deno.land/x/gokv@0.0.12/mod.ts";
 
 const kv = gokv.DurableKV({ namespace: "xxx" });
 
+
+
+export default async function go(re){
+
 var se = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var X = se[Math.floor(Math.random() * (se.length - 1))] + se[Math.floor(Math.random() * (se.length - 1))] + se[Math.floor(Math.random() * (se.length - 1))]
  
 var ee = ["🅲", "🅳", "🅴", "🅵", "🅶", "🅷", "🅸", "🅹", "🅺", "🅻", "🅼", "🅽", "🆀", "🆁", "🆂", "🆃", "🆄", "🆅", "🆆", "🆇", "🆈", "🆉"]
 var E = ee[Math.floor(Math.random() * (ee.length - 1))] + ee[Math.floor(Math.random() * (ee.length - 1))] + ee[Math.floor(Math.random() * (ee.length - 1))]
-
-export default async function go(re){
 
 await kv.put(X, E)
 re = await kv.get(X)
