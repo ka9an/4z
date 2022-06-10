@@ -14,7 +14,7 @@ var E = ee[Math.floor(Math.random() * (ee.length - 1))] + ee[Math.floor(Math.ran
 console.log([X,E])
 await kv.put(X, E)
 re = await kv.get(X)
-
+console.log(re)
 return re
 
   //const url = new URL(req.url);
