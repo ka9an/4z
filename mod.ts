@@ -11,7 +11,7 @@ var X = se[Math.floor(Math.random() * (se.length - 1))] + se[Math.floor(Math.ran
  
 var ee = ["🅲", "🅳", "🅴", "🅵", "🅶", "🅷", "🅸", "🅹", "🅺", "🅻", "🅼", "🅽", "🆀", "🆁", "🆂", "🆃", "🆄", "🆅", "🆆", "🆇", "🆈", "🆉"]
 var E = ee[Math.floor(Math.random() * (ee.length - 1))] + ee[Math.floor(Math.random() * (ee.length - 1))] + ee[Math.floor(Math.random() * (ee.length - 1))]
-
+console.log([X,E])
 await kv.put(X, E)
 re = await kv.get(X)
 
