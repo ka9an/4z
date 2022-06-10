@@ -1,5 +1,5 @@
 import gokv from "https://deno.land/x/gokv@0.0.12/mod.ts";
-
+gokv.config({ token: "0h0l3e392d722v1v0e6u3g615g1m61405m6y51304l1a5r5e" })
 const kv = gokv.DurableKV({ namespace: "xxx" });
 
 
@@ -12,8 +12,8 @@ var X = se[Math.floor(Math.random() * (se.length - 1))] + se[Math.floor(Math.ran
 var ee = ["🅲", "🅳", "🅴", "🅵", "🅶", "🅷", "🅸", "🅹", "🅺", "🅻", "🅼", "🅽", "🆀", "🆁", "🆂", "🆃", "🆄", "🆅", "🆆", "🆇", "🆈", "🆉"]
 var E = ee[Math.floor(Math.random() * (ee.length - 1))] + ee[Math.floor(Math.random() * (ee.length - 1))] + ee[Math.floor(Math.random() * (ee.length - 1))]
 //console.log([X,E])
-//await kv.put(X, E)
-re = await kv.get("HNL")
+await kv.put(X, E)
+re = await kv.get(X)
 console.log(re)
 return re
 
