@@ -1,10 +1,14 @@
 import gokv from "https://deno.land/x/gokv@0.0.12/mod.ts";
-gokv.config({ token: "0h0l3e392d722v1v0e6u3g615g1m61405m6y51304l1a5r5e" })
-const kv = gokv.DurableKV({ namespace: "xxx" });
+gokv.config({ token: Deno.env.get("GOKV_TOKEN") })
+
+
+  
 
 
 
 export default async function go(re){
+
+const kv = gokv.DurableKV({ namespace: "xxx" })
 
 var se = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var X = se[Math.floor(Math.random() * (se.length - 1))] + se[Math.floor(Math.random() * (se.length - 1))] + se[Math.floor(Math.random() * (se.length - 1))]
@@ -12,8 +16,8 @@ var X = se[Math.floor(Math.random() * (se.length - 1))] + se[Math.floor(Math.ran
 var ee = ["🅲", "🅳", "🅴", "🅵", "🅶", "🅷", "🅸", "🅹", "🅺", "🅻", "🅼", "🅽", "🆀", "🆁", "🆂", "🆃", "🆄", "🆅", "🆆", "🆇", "🆈", "🆉"]
 var E = ee[Math.floor(Math.random() * (ee.length - 1))] + ee[Math.floor(Math.random() * (ee.length - 1))] + ee[Math.floor(Math.random() * (ee.length - 1))]
 //console.log([X,E])
-await kv.put(X, E)
-re = await kv.get(X)
+//await kv.put(X, E)
+re = await kv.list()
 console.log(re)
 return re
 
