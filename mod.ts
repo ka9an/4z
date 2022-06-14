@@ -16,9 +16,10 @@ var ee = ["🅲", "🅳", "🅴", "🅵", "🅶", "🅷", "🅸", "🅹", "🅺"
 var E = ee[Math.floor(Math.random() * (ee.length - 1))] + ee[Math.floor(Math.random() * (ee.length - 1))] + ee[Math.floor(Math.random() * (ee.length - 1))]
 //console.log([X,E])
 //await kv.put(X, E)
-re = await kv.list()
 console.log(re)
-return re
+var rr = await kv.list()
+//
+return rr
 
   //const url = new URL(req.url);
 
