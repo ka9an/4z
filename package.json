@@ -1,6 +1,6 @@
 {
 	"name": "4z",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"scripts": {
 		"g": "git add . && git commit -m \"first commit\" && git push -u origin main -f",
 		"n": "git add . && git commit -m 0 && npx np patch --no-cleanup --no-tests"
