@@ -5,7 +5,6 @@ gokv.config({ token: Deno.env.get("GOKV_TOKEN") })
   
 
 
-
 export default async function go(re){
 
 const kv = gokv.DurableKV({ namespace: "xxx" })
